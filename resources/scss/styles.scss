@@ -1,11 +1,11 @@
-@import "base/normalize";
+@import "./base/index", "./component/index", "./utilities/index";
 
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
 * {
   font-family: "Lato", sans-serif;
-  color: #777;
+  color: $secondary-color;
   box-sizing: border-box;
 }
 
@@ -22,13 +22,13 @@ a {
 /* ============================================= */
 
 .headline-primary {
-  color: #58e1c1;
+  color: $primary-color;
   margin-left: 10px;
 }
 
 .headline-secondary {
   font-weight: 300;
-  color: #777;
+  color: $secondary-color;
 }
 
 .link {
@@ -42,7 +42,7 @@ a {
   font-style: italic;
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 8px solid #58e1c1;
+  border-left: 8px solid $primary-color;
   border-radius: 5px;
 }
 
@@ -142,7 +142,7 @@ a {
 
 .nav-link:hover {
   color: #fff;
-  background-color: #58e1c1;
+  background-color: $primary-color;
 }
 
 /* ============================================= */
@@ -193,7 +193,7 @@ a {
   margin: 10px auto 0;
   border: none;
   padding: 10px;
-  border-bottom: 5px solid #58e1c1;
+  border-bottom: 5px solid $primary-color;
 }
 
 .hidden {
@@ -210,18 +210,14 @@ a {
 /* ============================================= */
 
 .img-avatar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include center;
   margin-top: 10px;
   max-width: 100%;
   max-height: 100%;
 }
 
 .img-frame {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include center;
   margin-top: 10px;
   max-width: 100%;
   padding: 13px;
@@ -229,26 +225,20 @@ a {
 }
 
 .img-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include center;
 }
 
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
-@media (min-width: 768px) {
+@media (min-width: $break-m) {
   .container {
     max-width: 1400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @include center;
   }
 
   .centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @include center;
   }
 
   .row {
