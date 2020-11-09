@@ -1,50 +1,4 @@
-@import "./base/index", "./component/index", "./utilities/index";
-
-/* ============================================= */
-/*              Base styles                      */
-/* ============================================= */
-* {
-  font-family: "Lato", sans-serif;
-  color: $secondary-color;
-  box-sizing: border-box;
-}
-
-p {
-  line-height: 1.45em;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* ============================================= */
-/*              Typography                       */
-/* ============================================= */
-
-.headline-primary {
-  color: $primary-color;
-  margin-left: 10px;
-}
-
-.headline-secondary {
-  font-weight: 300;
-  color: $secondary-color;
-}
-
-.link {
-  color: #51ddfc;
-  font-weight: 700;
-}
-
-.blockquote {
-  font-size: 1.5em;
-  font-weight: 300;
-  font-style: italic;
-  margin-left: 20px;
-  padding-left: 20px;
-  border-left: 8px solid $primary-color;
-  border-radius: 5px;
-}
+@import "./utilities/index", "./base/index", "./component/index";
 
 /* ============================================= */
 /*              Grid System                      */
@@ -141,7 +95,7 @@ a {
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: $white-color;
   background-color: $primary-color;
 }
 
@@ -152,7 +106,7 @@ a {
 .btn {
   margin-top: 15px;
   width: 100%;
-  color: #fff;
+  color: $white-color;
   border: none;
   padding: 10px 0;
   text-transform: uppercase;
@@ -221,7 +175,7 @@ a {
   margin-top: 10px;
   max-width: 100%;
   padding: 13px;
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
 }
 
 .img-logo {
