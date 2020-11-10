@@ -1,0 +1,60 @@
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: $break-m) {
+  .container {
+    max-width: 1400px;
+    @include center;
+  }
+
+  .centered {
+    @include center;
+  }
+
+  .row {
+    @include flexy-column($flex-d: row);
+  }
+
+  [class^="col"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  [class^="col"] + [class^="col"] {
+    margin-left: 10px;
+  }
+
+  $col-basis: "col-1" 8.33%, "col-2" 16.67%, "col-3" 25%, "col-4" 33.33%,
+    "col-5" 41.67%, "col-6" 50%, "col-7" 58.33%, "col-8" 66.67%, "col-9" 75%,
+    "col-10" 83.33%, "col-11" 91.67%, "col-12" 100%;
+
+  @each $name, $basis in $col-basis {
+    .#{$name} {
+      flex-basis: $basis;
+    }
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    &-link {
+      flex-basis: 100%;
+    }
+  }
+
+  .btn {
+    padding: 10px 30px;
+  }
+
+  .btn + .btn {
+    margin-left: 10px;
+  }
+
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}

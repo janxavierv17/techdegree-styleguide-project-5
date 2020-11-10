@@ -1,6 +1,22 @@
 //Whenever elements or containers are required to be centered;
-@mixin center {
+@mixin center($t-margin: null, $mx-wd: null) {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: $t-margin;
+  max-width: $mx-wd;
+}
+
+@mixin flexy-column($basis: null, $disp: null, $flex-d: null) {
+  flex-basis: $basis;
+  display: $disp;
+  flex-direction: $flex-d;
+}
+
+@mixin btn-nav($brdr: null, $disp: null, $w, $g-brdr: null, $b-brdr: null) {
+  border-radius: $brdr;
+  display: $disp;
+  width: $w;
+  border: $g-brdr;
+  border-bottom: $b-brdr;
 }

@@ -1,0 +1,25 @@
+/* ============================================= */
+/*              Forms                            */
+/* ============================================= */
+
+.form {
+  @include flexy-column($basis: 100%);
+  .input {
+    @include btn-nav(
+      $disp: block,
+      $w: 94%,
+      $g-brdr: none,
+      $b-brdr: 5px solid $primary-color
+    );
+    margin: 10px auto 0;
+    padding: 10px;
+  }
+  .hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}

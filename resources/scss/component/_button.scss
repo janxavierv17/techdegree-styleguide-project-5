@@ -1,0 +1,24 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+  @include btn-nav($brdr: 5px, $w: 100%);
+  margin-top: 15px;
+  color: $white-color;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+$btn-types: "default" #51ddfc, "error" #e4757a, "info" #927bc1,
+  "success" #63cc82, "warning" #fd7856;
+
+@each $name, $color in $btn-types {
+  .#{$name} {
+    background-color: $color;
+  }
+  .#{$name}:hover {
+    background-color: lighten($color, 3%);
+  }
+}
